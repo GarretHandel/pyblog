@@ -1,0 +1,32 @@
+{
+    "0": {
+        "a": {
+            "href": "?a=admin&p=home",
+            "body": "Home"
+        }
+    },
+    "1": { 
+        "a": {
+            "href": "?a=admin&p=pages",
+            "body": "Pages"
+        }
+    },
+    "2": { 
+        "a": {
+            "href": "?a=admin&p=posts",
+            "body": "Posts"
+        }
+    },
+    "3": { 
+        "a": {
+            "href": "?a=admin&p=new_post",
+            "body": "New Post"
+        }
+    },
+    "4": { 
+        "a": {
+            "href": "?a=admin&p=style",
+            "body": "Styling"
+        }
+    }
+}

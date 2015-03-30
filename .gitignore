@@ -1,1 +1,11 @@
-bin/wfastcgi.py
+bin/
+*.pyc
+*.pyproj
+css/
+db.json
+js/
+media/
+obj/
+setup.py
+*.config
+.svn/

@@ -1,0 +1,59 @@
+{
+    "0": {
+        "div": {
+            "id": "menu",
+            "children": { 
+                "0": {
+                    "a": {
+                        "href": "?a=admin&p=home",
+                        "body": "Home"
+                    }
+                },
+                "1": { 
+                    "a": {
+                        "href": "?a=admin&p=pages",
+                        "body": "Pages"
+                    }
+                },
+                "2": { 
+                    "a": {
+                        "href": "?a=admin&p=posts",
+                        "body": "Posts"
+                    }
+                },
+                "3": { 
+                    "a": {
+                        "href": "?a=admin&p=new_post",
+                        "body": "New Post"
+                    }
+                },
+                "4": { 
+                    "a": {
+                        "href": "?a=admin&p=style",
+                        "body": "Styling"
+                    }
+                }
+            }
+        }
+    },
+    "1": {
+        "div": {
+            "id": "submenu"
+        }
+    },
+    "2": {
+        "main": {
+
+        }
+    },
+    "3": {
+        "footer": {
+            "body": {
+                "p": {
+                    "id": "copy",
+                    "body": "Copyright &copy; 2015 Garret Handel"
+                }
+            }
+        }
+    }
+}

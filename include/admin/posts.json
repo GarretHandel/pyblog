@@ -1,0 +1,45 @@
+{
+    "0": {
+        "div": {
+            "class": "rule"
+        }
+    },
+    "1": {
+        "div": {
+            "class": "post",
+            "body": {
+                "0": {
+                    "div": {
+                        "class": "post-info",
+                        "body": {
+                            "0": {
+                                "span": {
+                                    "class": "poster",
+                                    "text": ""
+                                }
+                            },
+                            "1": {
+                                "span": {
+                                    "class": "post-date",
+                                    "text": ""
+                                }
+                            }
+                        }
+                    }
+                },
+                "1": {
+                    "img": {
+                        "class": "post-picture",
+                        "src": ""
+                    }
+                },
+                "2": {
+                    "p": {
+                        "class": "post-body",
+                        "text": ""
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "0": {
+        "div": {
+            "id": "spacer"
+        }
+    },
+    "1": {
+        "menu": {
+        }
+    },
+    "2": {
+        "main": {
+            "children": {
+                "0": {
+                    "div": {
+                        "id": "posts"
+                    }
+                }
+            }
+        }
+    },
+    "3": {
+        "footer": {
+            "children": {
+                "0": {
+                    "p": {
+                        "text": "Copyright &copy; 2015 Garret Handel"
+                    }
+                },
+                "1": {
+                    "p": {
+                        "id": "fineprint",
+                        "children": {
+                            "0": {
+                                "a": {
+                                    "href": "?a=admin",
+                                    "text": "Admin"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
