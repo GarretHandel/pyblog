@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import os, sys, cgi, cgitb, HTMLTemplate, re, json
+import os, sys, cgi, cgitb, HTML, re, json
 
 cgitb.enable()
 
@@ -14,7 +14,7 @@ area = form.getvalue("a", "main")
 dbFile = open('db.json', 'r')
 dbInfo = json.load(dbFile)
 
-template = HTMLTemplate.HTML('Blog', page, area, **dbInfo)
+template = HTML.HTML('Blog', page, area, **dbInfo)
 
 for root, dirs, files in os.walk("js"):
     for f in files:
