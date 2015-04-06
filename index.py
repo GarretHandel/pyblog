@@ -14,7 +14,9 @@ area = form.getvalue("a", "main")
 dbFile = open('db.json', 'r')
 dbInfo = json.load(dbFile)
 
-template = HTML.HTML('Blog', page, area, **dbInfo)
+debug = True
+
+template = HTML.HTML(debug, 'Blog', page, area, **dbInfo)
 
 for root, dirs, files in os.walk("js"):
     for f in files:
@@ -25,6 +27,8 @@ for root, dirs, files in os.walk("css"):
         css = re.split(".", f)
         media = "" if css[0] == "main" else css[0]
         template.addLink("stylesheet", "text/css", os.path.join(root, f), media)
+
+template.generateBody()
 
 print template.render()
 sys.exit(0)
