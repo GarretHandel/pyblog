@@ -1,165 +1,129 @@
 {
     "0": {
         "div": {
-            "attrs": {
-                "id": ""
-            },
-            "html": {
-                "0": {
-                    "form": {
-                        "attrs": {
-                            "action": "",
-                            "method": "post",
-                            "enctype": "multipart/form-data"
-                        },
-                        "html": {
-                            "0": {
-                                "fieldset": {
-                                    "attrs": "",
-                                    "html": {
-                                        "0": {
-                                            "legend": {
-                                                "attrs": "",
-                                                "html": "New Post"
-                                            }
-                                        },
-                                        "1": {
-                                            "label": {
-                                                "attrs": {
-                                                    "for": "post-title"
-                                                },
-                                                "html": "Post Title"
-                                            }
-                                        },
-                                        "2": {
-                                            "br": ""
-                                        },
-                                        "3": {
-                                            "input": {
-                                                "attrs": {
-                                                    "id": "post-title",
-                                                    "type": "html",
-                                                    "name": "title"
-                                                },
-                                                "html": ""
-                                            }
-                                        },
-                                        "4": {
-                                            "br": ""
-                                        },
-                                        "5": {
-                                            "br": ""
-                                        },
-                                        "6": {
-                                            "label": {
-                                                "attrs": {
-                                                    "for": "post-picture"
-                                                },
-                                                "html": "Post Picture"
-                                            }
-                                        },
-                                        "7": {
-                                            "br": ""
-                                        },
-                                        "8": {
-                                            "input": {
-                                                "attrs": {
-                                                    "id": "post-picture",
-                                                    "type": "file",
-                                                    "name": "picture",
-                                                    "accept": "image/*"
+            "id": "",
+            "body": {
+                "form": {
+                    "action": "",
+                    "method": "post",
+                    "enctype": "multipart/form-data",
+                    "body": {
+                        "fieldset": {
+                            "body": {
+                                "0": {
+                                    "legend": {
+                                        "text": "New Post"
+                                    }
+                                },
+                                "1": {
+                                    "label": {
+                                        "for": "post-title",
+                                        "text": "Post Title"
+                                    }
+                                },
+                                "2": {
+                                    "br": { }
+                                },
+                                "3": {
+                                    "input": {
+                                        "id": "post-title",
+                                        "type": "text",
+                                        "name": "title"
+                                    }
+                                },
+                                "4": {
+                                    "br": { }
+                                },
+                                "5": {
+                                    "br": { }
+                                },
+                                "6": {
+                                    "label": {
+                                        "for": "post-picture",
+                                        "text": "Post Picture"
+                                    }
+                                },
+                                "7": {
+                                    "br": { }
+                                },
+                                "8": {
+                                    "input": {
+                                        "id": "post-picture",
+                                        "type": "file",
+                                        "name": "picture",
+                                        "accept": "image/*"
+                                    }
+                                },
+                                "9": {
+                                    "br": { }
+                                },
+                                "10": {
+                                    "br": { }
+                                },
+                                "11": {
+                                    "label": {
+                                        "for": "post-body",
+                                        "text": "Post Body"
+                                    }
+                                },
+                                "12": {
+                                    "br": { }
+                                },
+                                "13": {
+                                    "input": {
+                                        "id": "post-body",
+                                        "type": "text",
+                                        "name": "body"
+                                    }
+                                },
+                                "14": {
+                                    "br": { }
+                                },
+                                "15": {
+                                    "br": { }
+                                },
+                                "16": {
+                                    "label": {
+                                        "for": "page-select",
+                                        "text": "Page"
+                                    }
+                                },
+                                "17": {
+                                    "br": { }
+                                },
+                                "18": {
+                                    "select": {
+                                        "id": "page-select",
+                                        "body": {
+                                            "0": {
+                                                "option": {
+                                                    "value": ""
                                                 }
-                                            }
-                                        },
-                                        "9": {
-                                            "br": ""
-                                        },
-                                        "10": {
-                                            "br": ""
-                                        },
-                                        "11": {
-                                            "label": {
-                                                "attrs": {
-                                                    "for": "post-body"
-                                                },
-                                                "html": "Post Body"
-                                            }
-                                        },
-                                        "12": {
-                                            "br": ""
-                                        },
-                                        "13": {
-                                            "input": {
-                                                "attrs": {
-                                                    "id": "post-body",
-                                                    "type": "html",
-                                                    "name": "body"
+                                            },
+                                            "1": {
+                                                "option": {
+                                                    "value": "365",
+                                                    "text": "Project 365"
                                                 }
-                                            }
-                                        },
-                                        "14": {
-                                            "br": ""
-                                        },
-                                        "15": {
-                                            "br": ""
-                                        },
-                                        "16": {
-                                            "label": {
-                                                "attrs": {
-                                                    "for": "page-select"
-                                                },
-                                                "html": "Page"
-                                            }
-                                        },
-                                        "17": {
-                                            "br": ""
-                                        },
-                                        "18": {
-                                            "select": {
-                                                "attrs": {
-                                                    "id": "page-select"
-                                                },
-                                                "html": {
-                                                    "0": {
-                                                        "option": {
-                                                            "attrs": {
-                                                                "value": ""
-                                                            },
-                                                            "html": ""
-                                                        }
-                                                    },
-                                                    "1": {
-                                                        "option": {
-                                                            "attrs": {
-                                                                "value": "365"
-                                                            },
-                                                            "html": "Project 365"
-                                                        }
-                                                    },
-                                                    "2": {
-                                                        "option": {
-                                                            "attrs": {
-                                                                "value": "projlife"
-                                                            },
-                                                            "html": "Project Life"
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        "19": {
-                                            "br": ""
-                                        },
-                                        "20": {
-                                            "br": ""
-                                        },
-                                        "21": {
-                                            "input": {
-                                                "attrs": { 
-                                                    "type": "submit"
+                                            },
+                                            "2": {
+                                                "option": {
+                                                    "value": "projlife",
+                                                    "text": "Project Life"
                                                 }
                                             }
                                         }
+                                    }
+                                },
+                                "19": {
+                                    "br": { }
+                                },
+                                "20": {
+                                    "br": { }
+                                },
+                                "21": {
+                                    "input": {
+                                        "type": "submit"
                                     }
                                 }
                             }

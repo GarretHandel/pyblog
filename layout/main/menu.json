@@ -1,50 +1,38 @@
-{
+{ 
     "0": {
         "ul": {
-            "attrs": "",
-            "html": {
+            "children": {
                 "0": {
                     "li": {
-                        "attrs": "",
-                        "html": {
+                        "children": {
                             "0": {
                                 "a": {
-                                    "attrs": {
-                                        "href": "?p=home"
-                                    },
-                                    "html": "Home"
+                                    "href": "?p=home",
+                                    "text": "Home"
                                 }
                             },
                             "1": {
                                 "a": {
-                                    "attrs": {
-                                        "href": "?p=365"
-                                    },
-                                    "html": "Project 365"
+                                    "href": "?p=365",
+                                    "text": "Project 365"
                                 }
                             },
                             "2": {
                                 "a": {
-                                    "attrs": {
-                                        "href": "?p=projlife"
-                                    },
-                                    "html": "Project Life"
+                                    "href": "?p=projlife",
+                                    "text": "Project Life"
                                 }
                             },
                             "3": {
                                 "a": {
-                                    "attrs": {
-                                        "href": "?p=about"
-                                    },
-                                    "html": "About"
+                                    "href": "?p=about",
+                                    "text": "About"
                                 }
                             },
                             "4": {
                                 "a": {
-                                    "attrs": { 
-                                        "href": "?p=contact"
-                                    },
-                                    "html": "Contact"
+                                    "href": "?p=contact",
+                                    "text": "Contact"
                                 }
                             }
                         }

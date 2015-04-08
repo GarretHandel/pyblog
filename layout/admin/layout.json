@@ -1,40 +1,36 @@
 {
     "0": {
         "div": {
-            "attrs": {
-                "id": "menu"
-            },
-            "html": {
+            "id": "menu",
+            "children": { 
                 "0": {
                     "a": {
-                        "attrs": {
-                            "href": "?a=admin&p=home"
-                        },
-                        "html": "Home"
+                        "href": "?a=admin&p=home",
+                        "body": "Home"
                     }
                 },
-                "1": {
+                "1": { 
                     "a": {
                         "href": "?a=admin&p=pages",
-                        "html": "Pages"
+                        "body": "Pages"
                     }
                 },
-                "2": {
+                "2": { 
                     "a": {
                         "href": "?a=admin&p=posts",
-                        "html": "Posts"
+                        "body": "Posts"
                     }
                 },
-                "3": {
+                "3": { 
                     "a": {
                         "href": "?a=admin&p=new_post",
-                        "html": "New Post"
+                        "body": "New Post"
                     }
                 },
-                "4": {
+                "4": { 
                     "a": {
                         "href": "?a=admin&p=style",
-                        "html": "Styling"
+                        "body": "Styling"
                     }
                 }
             }
@@ -42,27 +38,20 @@
     },
     "1": {
         "div": {
-            "attrs": {
-                "id": "submenu"
-            },
-            "html": ""
+            "id": "submenu"
         }
     },
     "2": {
         "main": {
-            "attrs": "",
-            "html": ""
+
         }
     },
     "3": {
         "footer": {
-            "attrs": "",
-            "html": {
+            "body": {
                 "p": {
-                    "attrs": { 
-                        "id": "copy"
-                    },
-                    "html": "Copyright &copy; 2015 Garret Handel"
+                    "id": "copy",
+                    "body": "Copyright &copy; 2015 Garret Handel"
                 }
             }
         }

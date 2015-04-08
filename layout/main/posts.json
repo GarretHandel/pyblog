@@ -1,38 +1,27 @@
 {
     "0": {
         "div": {
-            "attrs": {
-                "class": "rule"
-            },
-            "html": ""
+            "class": "rule"
         }
     },
     "1": {
         "div": {
-            "attrs": {
-                "class": "post"
-            },
-            "html": {
+            "class": "post",
+            "body": {
                 "0": {
                     "div": {
-                        "attrs": {
-                            "class": "post-info"
-                        },
-                        "html": {
+                        "class": "post-info",
+                        "body": {
                             "0": {
                                 "span": {
-                                    "attrs": {
-                                        "class": "poster"
-                                    },
-                                    "html": ""
+                                    "class": "poster",
+                                    "text": ""
                                 }
                             },
                             "1": {
                                 "span": {
-                                    "attrs": {
-                                        "class": "post-date"
-                                    },
-                                    "html": ""
+                                    "class": "post-date",
+                                    "text": ""
                                 }
                             }
                         }
@@ -40,18 +29,14 @@
                 },
                 "1": {
                     "img": {
-                        "attrs": {
-                            "class": "post-picture",
-                            "src": ""
-                        }
+                        "class": "post-picture",
+                        "src": ""
                     }
                 },
                 "2": {
                     "p": {
-                        "attrs": { 
-                            "class": "post-body"
-                        },
-                        "html": ""
+                        "class": "post-body",
+                        "text": ""
                     }
                 }
             }

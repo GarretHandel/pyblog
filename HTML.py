@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 
-import os, sys, db, cgi, cgitb, re, json, operator
+import os, sys, db, cgi, cgitb, re, json, pprint
 
 class HTML(object):
     """used to generate the HTML code to be outputted"""
     def __init__(self, debug, tStr, page, area, **dbInfo):
-        docRoot = os.environ["DOCUMENT_ROOT"]
-        self.incPath = os.path.join(docRoot, 'layout')
+        self.incPath = os.path.join(os.environ["DOCUMENT_ROOT"], 'layout')
         layout = open(os.path.join(self.incPath, 'all', 'layout.json'))
         self.layout = json.load(layout)
         layout.close()
@@ -21,64 +20,29 @@ class HTML(object):
         self.db = db.connect(**dbInfo)
         self.debug = debug
         self.debugOut = ''
-        self.debugBody = ''
 
     def generateBody(self):
         areaPath = os.path.join(self.incPath, self.area)
-        # load layout paths
-        layoutPath = os.path.join(areaPath, 'layout.json')
-        menuPath = os.path.join(areaPath, 'menu.json')
-        pagePath = os.path.join(areaPath, '{0}.json'.format(self.page))
-        self.debugOut += '<p>Loading packages: <br>{0}</p>'
-        self.debugOut = self.debugOut.format('<br> '.join([layoutPath, menuPath, pagePath]))
         # read file for area layout and add to main layout
-        if os.path.exists(layoutPath):
-            f = open(layoutPath, 'r')
-            self.layout['body']['html'] = json.load(f)
+        fPath = os.path.join(areaPath, 'layout.json')
+        mPath = os.path.join(areaPath, 'menu.json')
+        pPath = os.path.join(areaPath, '{0}.json'.format(self.page))
+        if self.debug:
+            self.debugOut += '<p>Loading packages: {0}</p>'
+            self.debugOut = self.debugOut.format('<br> '.join([fPath, mPath, pPath]))
+        if os.path.exists(fPath):
+            f = open(fPath, 'r')
+            self.layout['body']['children'] = json.load(f)
             f.close()
             # read file for menu layout and add to main layout
-            for x in self.layout['body']['html']:
-                for y in self.layout['body']['html'][x]:
-                    if self.debug:
-                        self.debugOut += "<br>Checking layout for: {0}<br>".format(y)
-                    if y == "menu":
-                        if os.path.exists(menuPath):
-                            self.debugOut += "Loaded menu layout<br>"
-                            self.layout['body']['html'][x][y]['html'] = json.load(open(menuPath, 'r'))
-                        else:
-                            self.layout['body']['html'][x][y]['html'] = "err404"
-                    elif y == "main":
-                        if os.path.exists(pagePath):
-                            self.debugOut += "Loaded page layout<br>"
-                            self.layout['body']['html'][x][y]['html'] = json.load(open(pagePath, 'r'))
-                        else:
-                            self.layout['body']['html'][x][y]['html'] = "err404"
+            for x in self.layout['body']['children']:
+                for y in self.layout['body']['children'][x]:
+                    if y == "menu" and os.path.exists(mPath):
+                        self.layout['body']['children'][x][y] = json.load(open(mPath, 'r'))
+                    if y == "main" and os.path.exists(pPath):
+                        self.layout['body']['children'][x][y] = json.load(open(pPath, 'r'))
                     else:
-                        # retain original contents
-                        pass
-        self.debugOut += "<br>Body contents: <br>{0}<br>".format(self.layout['body'])
-
-    def recurse(self, d):
-        d = sorted(d.items(), key=operator.itemgetter(0))
-        html = ''
-        for k, v in d:
-            try:
-                if k in self.tags:
-                    tag = self.tags[k]
-                    attrs = ''
-                    for ak in v['attrs']:
-                        attrs += ' {0}="{1}"'.format(ak, v['attrs'][ak])
-                    if isinstance(v['html'], dict):
-                        html += tag.format(attrs, self.recurse(v['html']))
-                    else:
-                        html += tag.format(attrs, v['html'])
-                else:
-                    if isinstance(v, dict):
-                        html += self.recurse(v)
-            except KeyError:
-                if isinstance(v, dict):
-                    html += self.recurse(v)
-        return html
+                        self.layout['body']['children'][x][y] = "err404"
 
     """Add JavaScript script to HTML head section"""
     def addJS(self, sPath="", sBody=""):
@@ -118,12 +82,10 @@ class HTML(object):
         for x in self.layout['head']['js']:
             jsItems = '\n'.join([jsItems, jsTag.format(self.layout['head']['js'][x]['src'], self.layout['head']['js'][x]['body'])])
         head = head.format(title, metaItems, linkItems, jsItems)
-        children = self.recurse(self.layout['body']['html'])
-        children += '<a href="?debug={0}">Turn Debugging {1}</a>'.format(int(not self.debug), "On" if self.debug is False else "Off")
         if self.debug:
-            children = self.debugOut + self.debugBody + children
-        body = body.format(children)
+            body = body.format(self.debugOut + ' '.join(self.layout['body']['children']))
+        else:
+            body = body.format("Test")
         html = html.format(head, body)
         html = self.tags['doctype'].format(html)
         return html
-        
