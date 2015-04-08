@@ -1,27 +1,38 @@
 {
     "0": {
         "div": {
-            "class": "rule"
+            "attrs": {
+                "class": "rule"
+            },
+            "html": ""
         }
     },
     "1": {
         "div": {
-            "class": "post",
-            "body": {
+            "attrs": {
+                "class": "post"
+            },
+            "html": {
                 "0": {
                     "div": {
-                        "class": "post-info",
-                        "body": {
+                        "attrs": {
+                            "class": "post-info"
+                        },
+                        "html": {
                             "0": {
                                 "span": {
-                                    "class": "poster",
-                                    "text": ""
+                                    "attrs": {
+                                        "class": "poster"
+                                    },
+                                    "html": ""
                                 }
                             },
                             "1": {
                                 "span": {
-                                    "class": "post-date",
-                                    "text": ""
+                                    "attrs": {
+                                        "class": "post-date"
+                                    },
+                                    "html": ""
                                 }
                             }
                         }
@@ -29,14 +40,18 @@
                 },
                 "1": {
                     "img": {
-                        "class": "post-picture",
-                        "src": ""
+                        "attrs": {
+                            "class": "post-picture",
+                            "src": ""
+                        }
                     }
                 },
                 "2": {
                     "p": {
-                        "class": "post-body",
-                        "text": ""
+                        "attrs": { 
+                            "class": "post-body"
+                        },
+                        "html": ""
                     }
                 }
             }
