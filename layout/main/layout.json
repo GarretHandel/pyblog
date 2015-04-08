@@ -1,40 +1,46 @@
 {
     "0": {
         "div": {
-            "id": "spacer"
+            "attrs": {
+                "id": "spacer"
+            },
+            "html": ""
         }
     },
     "1": {
         "menu": {
+            "attrs": "",
+            "html": ""
         }
     },
     "2": {
         "main": {
-            "children": {
-                "0": {
-                    "div": {
-                        "id": "posts"
-                    }
-                }
-            }
+            "attrs": "",
+            "html": ""
         }
     },
     "3": {
         "footer": {
-            "children": {
+            "attrs": "",
+            "html": {
                 "0": {
                     "p": {
-                        "text": "Copyright &copy; 2015 Garret Handel"
+                        "attrs": "",
+                        "html": "Copyright &copy; 2015 Garret Handel"
                     }
                 },
                 "1": {
                     "p": {
-                        "id": "fineprint",
-                        "children": {
+                        "attrs": {
+                            "id": "fineprint"
+                        },
+                        "html": {
                             "0": {
                                 "a": {
-                                    "href": "?a=admin",
-                                    "text": "Admin"
+                                    "attrs": {
+                                        "href": "?a=admin"
+                                    },
+                                    "html": "Admin"
                                 }
                             }
                         }

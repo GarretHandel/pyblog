@@ -10,11 +10,10 @@ form = cgi.FieldStorage()
 
 page = form.getvalue("p", "home")
 area = form.getvalue("a", "main")
+debug = bool(int(form.getvalue("debug", 0)))
 
 dbFile = open('db.json', 'r')
 dbInfo = json.load(dbFile)
-
-debug = True
 
 template = HTML.HTML(debug, 'Blog', page, area, **dbInfo)
 

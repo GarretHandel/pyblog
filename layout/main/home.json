@@ -1,7 +1,10 @@
 {
     "0": {
-        "div": { 
-            "text": "Test Text!!!"
+        "div": {
+            "attrs": { 
+                "id": "page-content"
+            },
+            "html": "Test Text!!!"
         }
     }
 }

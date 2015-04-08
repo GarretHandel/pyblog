@@ -1,32 +1,42 @@
 {
     "0": {
         "a": {
-            "href": "?a=admin&p=home",
-            "body": "Home"
+            "attrs": {
+                "href": "?a=admin&p=home"
+            },
+            "html": "Home"
         }
     },
-    "1": { 
+    "1": {
         "a": {
-            "href": "?a=admin&p=pages",
-            "body": "Pages"
+            "attrs": {
+                "href": "?a=admin&p=pages"
+            },
+            "html": "Pages"
         }
     },
-    "2": { 
+    "2": {
         "a": {
-            "href": "?a=admin&p=posts",
-            "body": "Posts"
+            "attrs": {
+                "href": "?a=admin&p=posts"
+            },
+            "html": "Posts"
         }
     },
-    "3": { 
+    "3": {
         "a": {
-            "href": "?a=admin&p=new_post",
-            "body": "New Post"
+            "attrs": {
+                "href": "?a=admin&p=new_post"
+            },
+            "html": "New Post"
         }
     },
-    "4": { 
+    "4": {
         "a": {
-            "href": "?a=admin&p=style",
-            "body": "Styling"
+            "attrs": { 
+                "href": "?a=admin&p=style"
+            },
+            "html": "Styling"
         }
     }
 }
