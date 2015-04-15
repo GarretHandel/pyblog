@@ -23,9 +23,10 @@ for root, dirs, files in os.walk("js"):
 
 for root, dirs, files in os.walk("css"):
     for f in files:
-        css = re.split(".", f)
-        media = "" if css[0] == "main" else css[0]
-        template.addLink("stylesheet", "text/css", os.path.join(root, f), media)
+        css = re.split("\.", f)[0]
+        media = "screen"
+        if css == area:
+            template.addLink("stylesheet", "text/css", os.path.join('http://'+os.environ['SERVER_NAME'], root, f), media)
 
 template.generateBody()
 

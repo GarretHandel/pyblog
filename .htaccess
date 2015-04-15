@@ -1,0 +1,12 @@
+Options -Indexes
+DirectoryIndex index.py
+Options +FollowSymlinks
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_URI} !-d
+RewriteCond %{REQUEST_URI} !-f
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.py -f
+RewriteRule ^/admin/(.*)$ index.py?a=admin&p=$1 
+RewriteRule ^(.+)/?(.*)$ index.py?a=$1&p=$2 [L,QSA]

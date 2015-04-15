@@ -40,7 +40,7 @@
     "h4": "<h4{0}>\n{1}\n</h4>\n",
     "h5": "<h5{0}>\n{1}\n</h5>\n",
     "h6": "<h6{0}>\n{1}\n</h6>\n",
-    "head": "<head>\n<meta charset=\"utf-8\"/>\n{0}\n{1}\n{2}\n{3}\n</head>\n",
+    "head": "<head>\n{0}\n{1}\n{2}\n{3}\n</head>\n",
     "header": "<header{0}>\n{1}\n</header>\n",
     "html": "<html>\n{0}\n{1}\n</html>",
     "hr": "<hr{0}/>\n",

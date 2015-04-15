@@ -1,9 +1,7 @@
 {
     "0": {
-        "div": {
-            "attrs": {
-                "id": "menu"
-            },
+        "menu": {
+            "attrs": "",
             "html": {
                 "0": {
                     "a": {
@@ -15,25 +13,33 @@
                 },
                 "1": {
                     "a": {
-                        "href": "?a=admin&p=pages",
+                        "attrs": {
+                            "href": "?a=admin&p=pages"
+                        },
                         "html": "Pages"
                     }
                 },
                 "2": {
                     "a": {
-                        "href": "?a=admin&p=posts",
+                        "attrs": {
+                            "href": "?a=admin&p=posts"
+                        },
                         "html": "Posts"
                     }
                 },
                 "3": {
                     "a": {
-                        "href": "?a=admin&p=new_post",
+                        "attrs": {
+                            "href": "?a=admin&p=new_post"
+                        },
                         "html": "New Post"
                     }
                 },
                 "4": {
                     "a": {
-                        "href": "?a=admin&p=style",
+                        "attrs": { 
+                            "href": "?a=admin&p=style"
+                        },
                         "html": "Styling"
                     }
                 }
